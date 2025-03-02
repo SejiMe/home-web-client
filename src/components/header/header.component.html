@@ -1,0 +1,19 @@
+<header class="grid items-center justify-between w-screen grid-cols-5 grid-rows-1 px-4 py-2 bg-green-800 h-14">
+  <section class="col-span-1">
+    <h1 class="text-3xl">Sejis Cozy Area</h1>
+  </section>
+  <nav class="content-center col-span-3">
+    <ul class="flex justify-center grow-0">
+      <li *ngFor="let nav of NavigationLists; index as i;" [routerLink]="" class="text-lg">
+        <a routerLink="{{nav.href}}" class="p-4 " [routerLinkActiveOptions]="{ exact: true }"
+          [routerLinkActive]="linkActive" ariaCurrentWhenActive="page">
+          {{nav.label}}
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <section class="col-span-1">
+
+    <a routerLink="login" routerLinkActive="hidden" ariaCurrentWhenActive="page">Login</a>
+  </section>
+</header>
