@@ -10,6 +10,10 @@ export const NavigationRoutes : NavigationPath[] = [
   {
     label: "Categories",
     href: '/categories'
+  },
+  {
+    label: "Learning Checklist",
+    href: "/learnings"
   }
 ]
 

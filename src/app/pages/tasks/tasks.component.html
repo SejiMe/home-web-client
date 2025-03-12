@@ -1,1 +1,56 @@
-<p>tasks works!</p>
+<main class="flex flex-col items-center w-screen h-screen gap-2">
+
+  @defer {
+
+  <section class="h-screen w-screen bg-amber-50 grid grid-cols-4 grid-rows-5 py-2 px-4">
+    <div class="col-start-1 col-span-1 rounded-xl bg-amber-300 p-2 flex items-center grow justify-center">
+      <h1 class="text-2xl font-extrabold  text-center ">
+        Task Management
+      </h1>
+    </div>
+
+    <button class="font-bold col-start-4 rounded-lg text-base uppercase  w-48 h-16
+      text-amber-400 outline-2 outline-amber-400 justify-center
+      hover:bg-amber-200 hover:text-black hover:outline-black transition-all duration-100 ease-linear
+      ">
+      Add Task
+    </button>
+
+    <div class="flex justify-between row-start-2 col-start-2 col-end-4 row-span-3 rounded-3xl">
+      <div>
+        <button> <ng-icon name="tablerChevronLeftPipe" /> </button>
+      </div>
+      <div class="">
+
+      </div>
+      <div class="flex items-center">
+        <button class="h-3/5  rounded-full outline-2 text-2xl
+        
+        "> <ng-icon name="tablerChevronRightPipe" /> </button>
+      </div>
+    </div>
+  </section>
+
+  }@placeholder {
+
+  <h2 ()>Loading Content</h2>
+
+  }
+  <section class="w-screen h-screen flex flex-col items-center">
+    <h1 class="text-6xl font-extrabold text-center">I ADMIT ANGULAR IS KINDA OP ASF! 😋</h1>
+
+    <h2>{{ AnimateIt() }}</h2>
+    <div
+      class="grid items-center w-2/4 grid-cols-3 grid-rows-2 p-3 text-green-200 shadow-md shadow-emerald-300 rounded-2xl bg-emerald-800 h-2/4">
+      <h1 class="col-start-2 p-2 text-4xl text-center outline-2 outline-dashed ">
+        Count <span class="inline-block"
+          [ngClass]="AnimateIt() ? 'animate-jump animate-once animate-duration-1000 animate-ease-out animate-normal animate-fill-forwards' : '' ">
+          {{count()}} </span>
+      </h1>
+      <button class="col-span-1 col-start-1 p-2 rounded-md grow bg-emerald-600 outline-2 outline-green-500"
+        (click)="increment()">Add</button>
+      <button class="col-start-3 p-2 rounded-md grow bg-emerald-600 outline-2 outline-green-500"
+        (click)="decrement()">Minus</button>
+    </div>
+  </section>
+</main>
