@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, NgModule, signal, ViewChild } from '@angular/core';
+import { Component, ElementRef, inject, signal, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskManagementService } from '@services/TaskService';
 import { NgIcon, provideIcons } from "@ng-icons/core"

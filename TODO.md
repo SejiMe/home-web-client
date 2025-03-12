@@ -1,5 +1,9 @@
 # Learning Path
 
+## TODO
+
+- [ ] Fix Theming in Angular Material
+
 ## Mastering Components & Directives
 
 Component Lifecycle Hooks:
@@ -15,7 +19,7 @@ Hooks:
 Other Built-in Directives:
 Expand your knowledge beyond ngClass by working with:
 
-- [ ] ngIf & ngFor: For conditional rendering and  looping.
+- [ ] ngIf & ngFor: For conditional rendering and looping.
 - [ ] ngStyle: For dynamic styling.
 - [ ] Custom Directives: Create your own attribute or structural directives to encapsulate behavior.
 
