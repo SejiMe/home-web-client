@@ -1,8 +1,10 @@
-import { Component, ElementRef, inject, signal, ViewChild } from '@angular/core';
+import { Component, OnInit, Renderer2 ,ElementRef, inject, signal, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskManagementService } from '@services/TaskService';
 import { NgIcon, provideIcons } from "@ng-icons/core"
 import { tablerChevronLeftPipe, tablerChevronRightPipe } from "@ng-icons/tabler-icons"
+import {FormBuilder, FormGroup} from "@angular/forms"
+
 
 
 @Component({
@@ -18,7 +20,7 @@ export class TasksComponent {
 
   private _tasks = inject(TaskManagementService)
 
-  name = signal("Seji");
+  isOpen = signal(false);
   count = signal(0);
 
   constructor() {
@@ -27,37 +29,13 @@ export class TasksComponent {
 
 
 
-  ReRollName = () => {
-    const random = Math.floor(Math.random() * 3);
-
-    const names = ["Sej", "Ren", "Blair"]
-    return names[random];
+  openModal() {
+    this.isOpen.update(() => true);
   }
 
-  changeName(name: string = "Jivan") {
-    const newName = this.ReRollName();
-    this.name.update(() => newName);
+  closeModal() {
+    this.isOpen.update(() => false);
+
   }
 
-  AnimateIt = signal(false);
-  // AnimationJump = clsx(this.AnimateIt() && "animate-jump animate-once animate-duration-1000 animate-ease-out animate-normal animate-fill-forwards")
-  // @ViewChild('countSpan') countSpan!: ElementRef
-  onAddAnimate() {
-    this.AnimateIt.update(() => true);
-    setTimeout(() => {
-      this.AnimateIt.update(() => false);
-    }, 1200)
-  }
-
-
-@ViewChild('countSpan') countSpan!: ElementRef
-  increment() {
-    this.count.set(this.count() + 1);
-    this.onAddAnimate();
-  }
-
-  decrement() {
-    this.count.set(this.count() - 1);
-    this.onAddAnimate();
-  }
 }

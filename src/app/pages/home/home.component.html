@@ -1,9 +1,27 @@
-<main class="flex flex-col w-screen h-full gap-2 bg-emerald-50">
+<main class="flex flex-col w-screen h-full gap-2">
   <section class="flex items-center justify-center h-screen">
     <h1 class="mb-5 text-4xl md:text-9xl
     animate-bounce animate-thrice animate-duration-[2000ms] animate-ease-out animate-normal animate-fill-forwards
     ">Cozy Area
     </h1>
+  </section>
+
+  <section class="h-screen">
+    <h1 class="text-6xl font-extrabold text-center">I ADMIT ANGULAR IS KINDA OP ASF! 😋</h1>
+
+    <h2>{{ AnimateIt() }}</h2>
+    <div
+      class="grid items-center w-2/4 grid-cols-3 grid-rows-2 p-3 text-green-200 shadow-md shadow-emerald-300 rounded-2xl bg-emerald-800 h-2/4">
+      <h1 class="col-start-2 p-2 text-4xl text-center outline-2 outline-dashed ">
+        Count <span class="inline-block"
+          [ngClass]="AnimateIt() ? 'animate-jump animate-once animate-duration-1000 animate-ease-out animate-normal animate-fill-forwards' : '' ">
+          {{count()}} </span>
+      </h1>
+      <button class="col-span-1 col-start-1 p-2 rounded-md grow bg-emerald-600 outline-2 outline-green-500"
+        (click)="increment()">Add</button>
+      <button class="col-start-3 p-2 rounded-md grow bg-emerald-600 outline-2 outline-green-500"
+        (click)="decrement()">Minus</button>
+    </div>
   </section>
 
   <section class="h-screen">
@@ -18,6 +36,8 @@
     </article>
 
   </section>
+
+
 
   <section>
     <article>
